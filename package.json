@@ -1,0 +1,28 @@
+{
+  "name": "streaming-platform",
+  "version": "1.0.0",
+  "description": "- [Description](#description)\r - [Features](#features)\r - [Technical Details](#technical-details)\r - [Getting Started](#getting-started)\r - [Contributing](#contributing)\r - [Contact](#contact)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cindykandie/streaming-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cindykandie/streaming-platform/issues"
+  },
+  "homepage": "https://github.com/cindykandie/streaming-platform#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.2.1"
+  }
+}
