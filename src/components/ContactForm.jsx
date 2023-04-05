@@ -1,23 +1,47 @@
-import React from 'react';
+import React, { useState } from "react";
 
-function ContactForm() {
+const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = { name, email, message };
+    console.log(formData); // replace with actual form submission logic
+  };
+
   return (
-    <div>
-      <h3>Contact Us</h3>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <br />
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <br />
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" required />
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   );
-}
+};
 
 export default ContactForm;

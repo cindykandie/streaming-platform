@@ -1,16 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import MovieListItem from './MovieListItem';
 
-function FavoritesList() {
+const FavouritesList = () => {
+  const favourites = useSelector(state => state.favourites);
+
   return (
     <div>
-      <h3>Favorites</h3>
-      <ul>
-        <li>Favorite Movie 1</li>
-        <li>Favorite Movie 2</li>
-        <li>Favorite Movie 3</li>
-      </ul>
+      <h2>Favourites List</h2>
+      {favourites.map((movie) => (
+        <MovieListItem key={movie.imdbID} movie={movie} />
+      ))}
     </div>
   );
-}
+};
 
-export default FavoritesList;
+export default FavouritesList;

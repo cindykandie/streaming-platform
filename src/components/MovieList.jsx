@@ -1,14 +1,18 @@
 import React from 'react';
+import MovieListItem from './MovieListItem';
 
-function MovieList() {
+function MovieList(props) {
   return (
     <div>
-      <h3>Search Results</h3>
-      <ul>
-        <li>Movie 1</li>
-        <li>Movie 2</li>
-        <li>Movie 3</li>
-      </ul>
+      {props.movies.map((movie) => (
+        <MovieListItem
+          key={movie.imdbID}
+          movie={movie}
+          onAddToFavorites={props.onAddToFavorites}
+          onRemoveFromFavorites={props.onRemoveFromFavorites}
+          isFavorite={props.favorites.includes(movie.imdbID)}
+        />
+      ))}
     </div>
   );
 }
