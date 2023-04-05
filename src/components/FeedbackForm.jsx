@@ -14,22 +14,22 @@ function FeedbackForm() {
   };
 
   return (
-    <div>
-      <h3>Feedback Form</h3>
+    <div className="feedback-form-container">
+      <h3 className="feedback-form-title">Feedback Form</h3>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input type="text" id="name" className="form-input" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input type="email" id="email" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+        <div className="form-group">
+          <label htmlFor="message" className="form-label">Message:</label>
+          <textarea id="message" className="form-input" value={message} onChange={(e) => setMessage(e.target.value)} />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   );

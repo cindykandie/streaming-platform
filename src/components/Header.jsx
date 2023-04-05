@@ -3,10 +3,10 @@ import Routes from '../Routes';
 
 function Header() {
   return (
-    <div>
-      <h2>Movie App</h2>
+    <header>
+      <h1>Movie App</h1>
       <Routes />
-    </div>
+    </header>
   );
 }
 

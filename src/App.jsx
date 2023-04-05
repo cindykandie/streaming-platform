@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import MovieList from "./components/MovieList";
-import { searchMovies, getMovie } from './omdb';
+import { searchMovies } from './omdb';
 
 function App() {
   const [movies, setMovies] = useState([]);

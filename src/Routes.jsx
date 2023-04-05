@@ -12,11 +12,30 @@ function Routes() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={SearchBar} />
-          <Route exact path="/search/:query" component={MovieList} />
-          <Route exact path="/movie/:id" component={MovieDetails} />
-          <Route exact path="/favourites" component={FavoritesList} />
-          <Route exact path="/contact" component={FeedbackForm} />
+          <nav>
+            <ul>
+              <li>
+                <Route exact path="/" component={SearchBar} />
+              </li>
+            
+            <li>
+              <Route exact path="/search/:query" component={MovieList} />
+            </li>
+            
+            <li>
+              <Route exact path="/movie/:id" component={MovieDetails} />
+            </li>
+            
+            <li>
+              <Route exact path="/favourites" component={FavoritesList} />
+            </li>
+            
+            <li>
+              <Route exact path="/contact" component={FeedbackForm} />
+            </li>
+            
+            </ul>
+          </nav>
         </Switch>
       </Router>
     );
