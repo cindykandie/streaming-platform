@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { fetchMovies } from '../redux/moviesSlice';
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
-  const history = useHistory();
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
