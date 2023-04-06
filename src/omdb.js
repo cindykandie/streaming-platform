@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 const OMDB_API_KEY = '630fd072';
 
 export const searchMovies = async (query) => {
