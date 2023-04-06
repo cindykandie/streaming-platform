@@ -1,17 +1,12 @@
 import React from 'react';
+import AppRoutes from '../Routes';
 
 function Header() {
   return (
-    <div>
-      <h2>Movie App</h2>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Favorites</li>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-    </div>
+    <header>
+      <h1>Movie App</h1>
+      <AppRoutes />
+    </header>
   );
 }
 

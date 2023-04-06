@@ -1,52 +1,38 @@
 import React, { useState } from 'react';
 
-const FeedbackForm = () => {
+function FeedbackForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [feedback, setFeedback] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // TODO: Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
-    <div>
-      <h2>Feedback Form</h2>
+    <div className="feedback-form-container">
+      <h3 className="feedback-form-title">Feedback Form</h3>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            required
-          />
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input type="text" id="name" className="form-input" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            required
-          />
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input type="email" id="email" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div>
-          <label htmlFor="feedback">Feedback:</label>
-          <textarea
-            id="feedback"
-            value={feedback}
-            onChange={(event) => setFeedback(event.target.value)}
-            required
-          />
+        <div className="form-group">
+          <label htmlFor="message" className="form-label">Message:</label>
+          <textarea id="message" className="form-input" value={message} onChange={(e) => setMessage(e.target.value)} />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   );
-};
+}
 
 export default FeedbackForm;
