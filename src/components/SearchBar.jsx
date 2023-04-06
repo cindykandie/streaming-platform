@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom'; // import useNavigate hook
 import { fetchMovies } from '../redux/moviesSlice';
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // use useNavigate hook to get navigate function
 
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch(fetchMovies(searchTerm));
-    history.push(`/search/${searchTerm}`);
+    navigate(`/search/${searchTerm}`); // use navigate to navigate
   };
 
   return (

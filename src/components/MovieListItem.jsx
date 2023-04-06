@@ -1,8 +1,8 @@
 import React from 'react';
 
 function MovieListItem(props) {
+  console.log(props.movie)
   const { Title, Year, Poster, imdbID } = props.movie;
-
   const handleAddToFavorites = () => {
     props.onAddToFavorites(imdbID);
   };

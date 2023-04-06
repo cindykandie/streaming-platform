@@ -1,7 +1,9 @@
 import React from 'react';
 import MovieListItem from './MovieListItem';
+import '../App.css'
 
 function MovieList(props) {
+  console.log(`Props: {}` ); // log when the MovieList component is being rendered
   return (
     <div>
       {props.movies.map((movie) => (
