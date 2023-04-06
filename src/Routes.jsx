@@ -1,43 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SearchBar from './components/SearchBar';
 import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
 import FavoritesList from './components/FavoritesList';
 import FeedbackForm from './components/FeedbackForm';
 
-function Routes() {
+function AppRoutes() {
     return (
       <Router>
-        <Header />
-        <Switch>
-          <nav>
-            <ul>
-              <li>
+        <Routes>
+        
                 <Route exact path="/" component={SearchBar} />
-              </li>
             
-            <li>
               <Route exact path="/search/:query" component={MovieList} />
-            </li>
-            
-            <li>
               <Route exact path="/movie/:id" component={MovieDetails} />
-            </li>
-            
-            <li>
               <Route exact path="/favourites" component={FavoritesList} />
-            </li>
-            
-            <li>
               <Route exact path="/contact" component={FeedbackForm} />
-            </li>
             
-            </ul>
-          </nav>
-        </Switch>
+        </Routes>
       </Router>
     );
   }
-  export default Routes
+  export default AppRoutes

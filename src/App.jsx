@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import { Provider } from 'react-redux';
+
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import MovieList from "./components/MovieList";
@@ -12,11 +14,14 @@ function App() {
     setMovies(results);
   };
   return (
-    <div className="App">
+    <Provider>
+      <div className="App">
       <Header />
       <SearchBar onSearch={handleSearch} />
       <MovieList movies={movies} />
     </div>
+    </Provider>
+    
   );
 }
 
