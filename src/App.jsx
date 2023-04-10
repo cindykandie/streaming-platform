@@ -8,18 +8,25 @@ import './App.css'
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearchResults, setShowSearchResults] = useState(false);
 
   const handleSearch = async (query) => {
     const results = await searchMovies(query);
-    setMovies(results);
+    setSearchResults(results);
+    setShowSearchResults(true);
   };
 
   return (
-      <div className="App">
-        <AppRoutes />
-        <SearchBar onSearch = {handleSearch} />
+    <div className="App">
+      <AppRoutes />
+      <SearchBar onSearch={handleSearch} />
+      {showSearchResults ? (
+        <MovieList movies={searchResults} />
+      ) : (
         <MovieList movies={movies} />
-      </div>
+      )}
+    </div>
   );
 }
 
