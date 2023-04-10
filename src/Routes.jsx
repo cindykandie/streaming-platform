@@ -5,18 +5,18 @@ import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
 import FavoritesList from './components/FavoritesList';
 import FeedbackForm from './components/FeedbackForm';
-import NavBar from './components/NavBar';
+import Header from './components/Header';
 
 function AppRoutes() {
   return (
     <Router>
-      <NavBar />
+      <Header />
       <Routes>
-        <Route path="/" element={<SearchBar />} />
-        <Route path="/search/:query" element={<MovieList />} />
-        <Route path="/movie/:id" element={<MovieDetails />} />
-        <Route path="/favourites" element={<FavoritesList />} />
-        <Route path="/contact" element={<FeedbackForm />} />
+        <Route exact path="/" component={SearchBar} />
+        <Route exact path="/search/:query" component={MovieList} />
+        <Route exact path="/movie/:id" component={MovieDetails} />
+        <Route exact path="/favourites" component={FavoritesList} />
+        <Route exact path="/contact" component={FeedbackForm} />
       </Routes>
     </Router>
   );
