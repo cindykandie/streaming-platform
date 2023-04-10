@@ -1,24 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SearchBar from './components/SearchBar';
+import App from './App';
 import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
 import FavoritesList from './components/FavoritesList';
 import FeedbackForm from './components/FeedbackForm';
-import NavBar from './components/NavBar';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
 
 function AppRoutes() {
   return (
     <Router>
-      <NavBar />
+      <Header />
       <Routes>
-        <Route path="/" element={<SearchBar />} />
-        <Route path="/search/:query" element={<MovieList />} />
-        <Route path="/movie/:id" element={<MovieDetails />} />
-        <Route path="/favourites" element={<FavoritesList />} />
-        <Route path="/contact" element={<FeedbackForm />} />
+        <Route exact path="/search/:query" element={<MovieList />} />
+        <Route exact path="/movie/:id" element={<MovieDetails />} />
+        <Route exact path="/favourites" element={<FavoritesList />} />
+        <Route exact path="/contact" element={<FeedbackForm />} />
       </Routes>
     </Router>
   );
 }
+
 export default AppRoutes;

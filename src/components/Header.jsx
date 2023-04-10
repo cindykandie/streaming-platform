@@ -1,11 +1,11 @@
 import React from 'react';
-import AppRoutes from '../Routes';
+import NavBar from './NavBar';
 
 function Header() {
   return (
     <header>
       <h1>Movie App</h1>
-      <AppRoutes />
+      <NavBar />
     </header>
   );
 }

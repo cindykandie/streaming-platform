@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav>
       <ul>
-        <li>
+      <li>
           <Link to="/">Home</Link>
         </li>
         <li>
