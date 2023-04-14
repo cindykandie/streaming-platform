@@ -6,7 +6,6 @@ import MovieDetails from './components/MovieDetails';
 import FavoritesList from './components/FavoritesList';
 import FeedbackForm from './components/FeedbackForm';
 import Header from './components/Header';
-import SearchBar from './components/SearchBar';
 
 function AppRoutes() {
   return (
