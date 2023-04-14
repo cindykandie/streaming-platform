@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/cindykandie/streaming-platform/issues"
   },
-  "homepage": "https://cindykandie.io/streaming-platform",
+  "homepage": "https://cindykandie.github.io/streaming-platform",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "axios": "^1.3.5",
