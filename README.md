@@ -11,6 +11,8 @@
 ## Description
 This is a simple app that allows users to search for movies and view information about individual movies. The app is built using React, React Router, and Redux Toolkit, and uses the OMDB API to retrieve movie data.
 
+- Checkout the [Live Demo](https://streaming-platform1.netlify.app/)
+
 ## Features
 - Search bar that allows users to search for movies by title
 - List of search results, including the movie's title, release date, and poster image
